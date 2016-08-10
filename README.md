@@ -3,9 +3,9 @@ Viewing google map and street view side by side
 
 You can see a script is added at the below 
 
-  <script async defer
+  "<script async defer
         src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initialize">
-  </script>
+  </script>"
 
 Make sure you replace "YOUR_API_KEY" with your own , I have used mine  , which is : AIzaSyAQdM3z7DNRkf0nenLAWU9_9SmFUb8KTTM
 
