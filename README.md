@@ -1,4 +1,4 @@
-# GoogleMapStreerViewSideBySide
+# GoogleMapStreetViewSideBySide
 Viewing google map and street view side by side 
 
 You can see a script is added at the below 
