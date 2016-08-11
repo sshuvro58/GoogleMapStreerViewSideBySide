@@ -20,7 +20,6 @@
     <div id="map"></div>
     <div id="pano"></div>
     <script>
-
       function initialize() {
         var fenway = {lat: 23.751635, lng: 90.392138};
 		
@@ -28,13 +27,16 @@
           zoom: 14,
           center: fenway
         });
-
         var marker = new google.maps.Marker({
           position: fenway,
           map: map,
+	  draggable: true,
           title: 'Hello World!'
         });
-		
+	
+ 	marker.addListener('click', toggleBounce);
+	
+	
         var panorama = new google.maps.StreetViewPanorama(
             document.getElementById('pano'), {
               position: fenway,
@@ -45,6 +47,16 @@
             });
         map.setStreetView(panorama);
       }
+
+     function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+
+
     </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQdM3z7DNRkf0nenLAWU9_9SmFUb8KTTM&callback=initialize">
